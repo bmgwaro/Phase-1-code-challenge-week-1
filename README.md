@@ -19,6 +19,7 @@ In order to run this on your machine, you need the following specifications
         500Gb HDD ROM
         Node js environment/browser console
         Github account
+        VsCode
 
 You would also need to access the files from my repository before being able to run them. Here's how you're going to do it.
         Follow this link to my github repository; https://github.com/bmgwaro/Phase-1-code-challenge-week-1
