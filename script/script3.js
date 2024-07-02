@@ -6,7 +6,7 @@ function netSalaryCalculator() {
 
   const nssfDeduction = grossSalary * 0.06; //calculates a 6 percent nssf deduction
 
-  //nhif deductions
+  //declaring nhifDeductions variables and making calculations for nhif deductions
   let nhifDeduction;
   if (grossSalary > 0 && grossSalary <= 5999) nhifDeduction = 150;
   else if (grossSalary > 5999 && grossSalary <= 7999) nhifDeduction = 300;
@@ -26,7 +26,7 @@ function netSalaryCalculator() {
   else if (grossSalary > 89999 && grossSalary <= 99999) nhifDeduction = 1600;
   else nhifDeduction = 1700;
 
-  //paye deductions
+  //here we make calculations for paye deductions after initialising the variable paye
   let paye;
   if (grossSalary > 0 && grossSalary <= 24000) paye = grossSalary * 0.1;
   else if (grossSalary > 24000 && grossSalary <= 32333)
@@ -37,7 +37,7 @@ function netSalaryCalculator() {
     paye = grossSalary * 0.325;
   else paye = grossSalary * 0.35;
 
-  //net salary
+  //initialises net salary variable and stores it after making necessary calculations
   const netSalary = grossSalary - (nssfDeduction + nhifDeduction + paye);
 
   //logging the expected values in the console
@@ -45,7 +45,9 @@ function netSalaryCalculator() {
   console.log(`NSSF Deduction: ${nssfDeduction}`);
   console.log(`NHIF Deduction: ${nhifDeduction}`);
   console.log(`PAYE: ${paye}`);
-  console.log(`Net salary: ${netSalary}`);
+
+  //returning the net salary
+  return `Net salary: ${netSalary}`;
 }
 console.log(netSalaryCalculator()); //calling the function
 debugger;

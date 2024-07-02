@@ -1,5 +1,9 @@
 function speedDetector(){
     const speed=prompt("Enter speed:") //prompts user to enter speed before storing it in speed variable
+    if(isNaN(speed) || speed <= 0){
+        return "Please enter a valid speed value";
+    }
+    
     if(speed >0 && speed <70){
       return "Ok"; //returns ok if speed is below 70
     }
